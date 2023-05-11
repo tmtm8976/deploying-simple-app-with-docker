@@ -1,5 +1,5 @@
 
-# To run the docker container
+# run the docker container
 
 ```bash
 # Build the app image by runnin:
