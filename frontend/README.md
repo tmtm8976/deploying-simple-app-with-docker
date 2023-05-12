@@ -21,8 +21,9 @@ this project is part of the docker-compose sample app project
 ```bash
   # build the image
   docker build -t my-react-app .
-
-  #run the containeer
+```
+```bash
+  #run the container
   docker run -p 3000:3000 my-react-app
 
 ```
