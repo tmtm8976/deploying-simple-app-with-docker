@@ -10,7 +10,7 @@ this project is part of the docker-compose sample app project
 
 # Instructions
 - to start the app run:
-'''bash
+```bash
   npm run start
 ```
 
