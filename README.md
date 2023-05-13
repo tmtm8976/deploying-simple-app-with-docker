@@ -6,10 +6,19 @@ docker-compose sample app, the app allows you to preform CRUD operations on a pe
 - nodejs with Express for the back-end
 
 
-## instructions
+## Instructions
+
+### the app runs on ports 3000 & 5000 make sure their available before running
+- to run using docker
 ```bash
-# run docker-compose up to build and start the app
+# run docker-compose up to build frontend and backend images and start the app
 docker-compose up
+
+```
+
+- to run without docker 
+```bash
+bash local_run.sh
 
 ```
 go to: http://localhost:3000/
