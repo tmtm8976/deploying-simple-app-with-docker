@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import field from './Field.module.css'
 
 
 
@@ -15,7 +16,7 @@ class Getall extends React.Component {
 
         return(
             <>
-                <button className="react-btn" onClick={this.handleGetAll}>get all</button>
+                <button className={field.btn_primary} onClick={this.handleGetAll} >get all</button>
             </>
         )
 

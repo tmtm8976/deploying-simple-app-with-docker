@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { api } from '../App'
+import field from './Field.module.css'
 
 class Delete extends Component {
     deletePerson = async (event) => {
@@ -17,7 +18,7 @@ class Delete extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.deletePerson}>Delete</button>
+                <button onClick={this.deletePerson} className={field.btn_Delete}>Delete</button>
             </div>
         )
     }

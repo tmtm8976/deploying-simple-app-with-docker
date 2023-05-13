@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { api } from '../App'
+import field from './Field.module.css'
 
 class Create extends Component {
     state = {
@@ -18,6 +19,8 @@ class Create extends Component {
             .catch(err=>console.log(err))
 
         console.log(res);
+        
+        this.props.getAll();
     }
 
     render() {
@@ -25,12 +28,12 @@ class Create extends Component {
 
         return (
             <div>
-                <form onSubmit={this.createPerson} >
-                    <input type='text' value={name} onChange={(event) => this.setState({ name: event.target.value })} placeholder='Name'></input>
-                    <input type='number' value={age} onChange={(event) => this.setState({ age: event.target.value })} placeholder='Age'></input>
-                    <input type='text' value={gender} onChange={(event) => this.setState({ gender: event.target.value })} placeholder='Gender'></input>
-                    <input type='text' value={email} onChange={(event) => this.setState({ email: event.target.value })} placeholder='Email'></input>
-                    <input type='submit' value='create'></input>
+                <form onSubmit={this.createPerson} className={field.form}>
+                    <input type='text' value={name} onChange={(event) => this.setState({ name: event.target.value })} placeholder='Name'  className={field.text}></input>
+                    <input type='number' value={age} onChange={(event) => this.setState({ age: event.target.value })} placeholder='Age'  className={field.text}></input>
+                    <input type='text' value={gender} onChange={(event) => this.setState({ gender: event.target.value })} placeholder='Gender'  className={field.text}></input>
+                    <input type='text' value={email} onChange={(event) => this.setState({ email: event.target.value })} placeholder='Email' className={field.text}></input>
+                    <input type='submit' value='create' className={field.btn_primary}></input>
                 </form>
             </div>
         )

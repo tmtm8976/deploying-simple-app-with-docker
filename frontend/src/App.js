@@ -56,26 +56,30 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          
-          <Create></Create>
-          <Update></Update>
+          <Getperson getPersonById={this.getPersonById}/>
+          <Getall getAll={this.getPersons}/>
+        </header>
+         
+        <Create getAll={this.getPersons} />
+          <Update getAll={this.getPersons} />
 
           
-          <Getperson getPersonById={this.getPersonById}/>
           
-          <Getall getAll={this.getPersons}></Getall>
 
           
           {/* delete */}
           {this.state.person.map( p => 
                 <h2 key={p.id}>
-                    {p.name}
+                <span className='key'>Id: </span>
+                <span>{p.id}</span>
+                  <span className='key'>Name:</span>
+                  <span>{p.name}</span>
+                  <span className='key'>Age:</span>
+                <span>{p.age}</span>
                     <Delete id={p.id} getAll={this.getPersons} />
                 </h2>
             )}
 
-
-        </header>
       </div>
     );
   }

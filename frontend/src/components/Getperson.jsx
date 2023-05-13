@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import field from './Field.module.css'
 
 class Getperson extends Component {
     state = {
@@ -17,9 +18,9 @@ class Getperson extends Component {
 
         return (
             <div>
-                <form onSubmit={this.handelsubmit}>
-                    <input type='text' value={id} onChange={(event) => this.setState({ id: event.target.value })} placeholder='Id'></input>
-                    <input type='submit' value='Get person'></input>
+                <form onSubmit={this.handelsubmit} className={field.form}>
+                    <input type='text' value={id} onChange={(event) => this.setState({ id: event.target.value })} placeholder='Id'  className={field.id}></input>
+                    <input type='submit' value='Get person' className={field.btn_primary}></input>
                 </form>
             </div>
         )
