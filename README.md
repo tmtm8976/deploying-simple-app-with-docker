@@ -8,7 +8,7 @@ docker-compose sample app, the app allows you to preform CRUD operations on a pe
 
 ## Instructions
 
-### the app runs on ports 3000 & 5000 make sure their available before running
+### Ensure that ports 3000 and 5000 are available before launching the app.
 - to run using docker
 ```bash
 # run docker-compose up to build frontend and backend images and start the app
